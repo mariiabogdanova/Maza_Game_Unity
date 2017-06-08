@@ -338,8 +338,8 @@ MonoBehaviour:
   speed: 20
   countText: {fileID: 532113762}
   pickUpCountDown: {fileID: 0}
-  setTime: 40
-  sampleTime: 40
+  setTime: 10
+  sampleTime: 10
 --- !u!54 &399801763
 Rigidbody:
   m_ObjectHideFlags: 0

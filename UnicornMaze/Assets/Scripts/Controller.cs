@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour
     private int count;
 
     void Start()
-    {
+    {	Time.timeScale = 1 ;
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
@@ -26,7 +26,11 @@ public class Controller : MonoBehaviour
     void Update()
     {
     	setTime -= Time.deltaTime;
+    	if (setTime <= 0){
+    		Time.timeScale = 0;
+    	}
     	print(setTime);
+
     }
 
     void FixedUpdate()
