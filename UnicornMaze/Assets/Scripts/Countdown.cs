@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour {
     public Text timerText;
     private float startTime;
-    private bool finnished = false;
+    private bool finished = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +16,7 @@ public class Countdown : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (finnished)
+        if (finished)
             return;
 
         float t = Time.time - startTime;

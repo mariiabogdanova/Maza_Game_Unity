@@ -7,6 +7,9 @@ public class Controller : MonoBehaviour
 
     public float speed;
     public Text countText;
+    public Text pickUpCountDown;
+    public float setTime;
+    public float sampleTime;
    // public Text timeisoutText;
 
     private Rigidbody rb;
@@ -18,6 +21,12 @@ public class Controller : MonoBehaviour
         count = 0;
         SetCountText();
        // timeisoutText.text = "";
+    }
+
+    void Update()
+    {
+    	setTime -= Time.deltaTime;
+    	print(setTime);
     }
 
     void FixedUpdate()
@@ -37,6 +46,8 @@ public class Controller : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
+            setTime = sampleTime;
+            Update();
         }
     }
 
@@ -47,5 +58,10 @@ public class Controller : MonoBehaviour
        // {
        //     timeisoutText.text = "You Win!";
        // }
+    }
+
+    void SetCountDownText()
+    {
+    	
     }
 }
