@@ -17,7 +17,7 @@ public class Controller : MonoBehaviour
     private int count;
 
     void Start()
-    {	Time.timeScale = 1 ;
+    {	Time.timeScale = 0 ;
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
