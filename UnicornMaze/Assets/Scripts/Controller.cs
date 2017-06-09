@@ -4,6 +4,7 @@ using System.Collections;
 
 public class Controller : MonoBehaviour
 {
+    public GameObject GameOverPanel;
 
     public float speed;
     public Text countText;
@@ -28,6 +29,7 @@ public class Controller : MonoBehaviour
     	setTime -= Time.deltaTime;
     	if (setTime <= 0){
 			Time.timeScale = 0;
+            GameOverPanel.SetActive(true);
     	}
 		pickUpCountDown.text=setTime.ToString("f0");
 
