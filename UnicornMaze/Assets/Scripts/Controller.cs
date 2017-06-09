@@ -18,6 +18,7 @@ public class Controller : MonoBehaviour
     void Start()
     {	Time.timeScale = 1 ;
         rb = GetComponent<Rigidbody>();
+        pickUpCountDown=GetComponent<Text>();
         count = 0;
         SetCountText();
        // timeisoutText.text = "";
@@ -27,9 +28,11 @@ public class Controller : MonoBehaviour
     {
     	setTime -= Time.deltaTime;
     	if (setTime <= 0){
-    		Time.timeScale = 0;
+			Time.timeScale = 0;
     	}
     	print(setTime);
+		
+		pickUpCountDown.text=setTime.ToString("f0");
 
     }
 
@@ -62,10 +65,5 @@ public class Controller : MonoBehaviour
        // {
        //     timeisoutText.text = "You Win!";
        // }
-    }
-
-    void SetCountDownText()
-    {
-    	
     }
 }
