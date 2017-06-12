@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour {
 
+    int i = 0;
+
 
 	public GameObject pauseButton, pausePanel, instructionPanel;
     public void OnPause() {
@@ -25,8 +27,12 @@ public class Pause : MonoBehaviour {
 
     public void OnLoadScene ()
     {
-		Time.timeScale = 1;
-    	instructionPanel.SetActive(false);
-		//Application.LoadLevel(SceneManager.GetActiveScene().name);
+        if (i == 0)
+        {
+            Time.timeScale = 1;
+            instructionPanel.SetActive(false);
+            //Application.LoadLevel(SceneManager.GetActiveScene().name);
+            i = i + 1;
+        }
     }
 }
