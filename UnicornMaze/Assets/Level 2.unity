@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -86,7 +86,8 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 27df0643378e24eb0a14c58feef3301b,
+    type: 2}
   m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
@@ -718,8 +719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334ef5519144d0e438a932a03abdacc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mazeRows: 12
-  mazeColumns: 12
+  mazeRows: 9
+  mazeColumns: 9
   wall: {fileID: 101274, guid: 2a571ace6952b154ca2ff06b0540f264, type: 2}
   size: 6
 --- !u!4 &1024433838
@@ -914,8 +915,8 @@ MonoBehaviour:
   speed: 20
   countText: {fileID: 393074618}
   pickUpCountDown: {fileID: 1139586718}
-  setTime: 10
-  sampleTime: 10
+  setTime: 12
+  sampleTime: 12
 --- !u!54 &1143361188
 Rigidbody:
   m_ObjectHideFlags: 0
