@@ -388,8 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334ef5519144d0e438a932a03abdacc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mazeRows: 10
-  mazeColumns: 10
+  mazeRows: 12
+  mazeColumns: 12
   wall: {fileID: 101274, guid: 2a571ace6952b154ca2ff06b0540f264, type: 2}
   size: 6
 --- !u!4 &290637026
@@ -438,7 +438,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 15, y: -10}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 190, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &327629364
 MonoBehaviour:
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1631953790}
-  speed: 20
+  speed: 30
   countText: {fileID: 327629364}
   pickUpCountDown: {fileID: 284890576}
   setTime: 10
