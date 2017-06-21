@@ -11,6 +11,7 @@ public class Controller : MonoBehaviour
     public Text pickUpCountDown;
     public float setTime;
     public float sampleTime;
+    public float numberOfPickUp;
    // public Text timeisoutText;
 
     private Rigidbody rb;
@@ -62,6 +63,7 @@ public class Controller : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
+            numberOfPickUp = numberOfPickUp - 1;
             SetCountText();
             setTime = sampleTime;
             Update();
@@ -71,6 +73,9 @@ public class Controller : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Your score: " + count.ToString();
+        if (numberOfPickUp == 0){
+            print("Win");
+        }
        // if (count >= 12)
        // {
        //     timeisoutText.text = "You Win!";

@@ -674,6 +674,7 @@ MonoBehaviour:
   pickUpCountDown: {fileID: 693348642}
   setTime: 12
   sampleTime: 12
+  numberOfPickUp: 16
 --- !u!54 &399801763
 Rigidbody:
   m_ObjectHideFlags: 0
