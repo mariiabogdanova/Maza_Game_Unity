@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour {
 
-    int i = 0;
+   // int i = 0;
 
 
 	public GameObject pauseButton, pausePanel, instructionPanel;
+    public AudioClip background_music;
     public void OnPause() {
         pausePanel.SetActive(true);
         pauseButton.SetActive(false);
@@ -27,12 +28,22 @@ public class Pause : MonoBehaviour {
 
     public void OnLoadScene ()
     {
-        if (i == 0)
-        {
+      //  if (i == 0)
+       // {
             Time.timeScale = 1;
             instructionPanel.SetActive(false);
-            //Application.LoadLevel(SceneManager.GetActiveScene().name);
-            i = i + 1;
-        }
+
+
+        this.gameObject.AddComponent<AudioSource>();
+        this.GetComponent<AudioSource>().clip = background_music;
+        this.GetComponent<AudioSource>().Play();
+
+       // background_music.Play();
+
+        //Application.LoadLevel(SceneManager.GetActiveScene().name);
+        //i = i + 1;
+
+
+        //  }
     }
 }

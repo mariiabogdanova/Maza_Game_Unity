@@ -11,7 +11,8 @@ public class Controller : MonoBehaviour
     public Text pickUpCountDown;
     public float setTime;
     public float sampleTime;
-   // public Text timeisoutText;
+    public AudioClip collect_sound;
+    // public Text timeisoutText;
 
     private Rigidbody rb;
     private int count;
@@ -60,6 +61,10 @@ public class Controller : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pick Up"))
         {
+            this.gameObject.AddComponent<AudioSource>();
+            this.GetComponent<AudioSource>().clip = collect_sound;
+            this.GetComponent<AudioSource>().Play();
+
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
