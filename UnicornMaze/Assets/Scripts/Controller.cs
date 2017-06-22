@@ -1,16 +1,17 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
 public class Controller : MonoBehaviour
 {
-    public GameObject GameOverPanel;
+    public GameObject GameOverPanel, winPanel;
 
     public float speed;
     public Text countText;
     public Text pickUpCountDown;
     public float setTime;
     public float sampleTime;
+    public float pickUpRemain;
     public AudioClip collect_sound;
     // public Text timeisoutText;
 
@@ -67,6 +68,7 @@ public class Controller : MonoBehaviour
 
             other.gameObject.SetActive(false);
             count = count + 1;
+            pickUpRemain = pickUpRemain - 1;
             SetCountText();
             setTime = sampleTime;
             Update();
@@ -76,9 +78,11 @@ public class Controller : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Your score: " + count.ToString();
-       // if (count >= 12)
-       // {
-       //     timeisoutText.text = "You Win!";
-       // }
+        if (pickUpRemain == 0){
+            Time.timeScale = 0;
+            winPanel.SetActive(true);
+        }
+       
     }
+
 }

@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9098039}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1870,13 +1870,13 @@ RectTransform:
   m_Children:
   - {fileID: 1363802805}
   - {fileID: 368170088}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1757469974}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 640, y: 274.5}
-  m_SizeDelta: {x: 780, y: 409}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -500, y: -140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1139586716
 GameObject:
@@ -1984,11 +1984,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1026401536}
+  winPanel: {fileID: 1064117833}
   speed: 30
   countText: {fileID: 393074618}
   pickUpCountDown: {fileID: 1139586718}
-  setTime: 12
-  sampleTime: 12
+  setTime: 15
+  sampleTime: 15
+  pickUpRemain: 26
   collect_sound: {fileID: 8300000, guid: 8b4b558795cd688409ea4429c9bb8520, type: 3}
 --- !u!54 &1143361188
 Rigidbody:
@@ -2601,7 +2603,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1363802807}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1757469970}
+        m_MethodName: OnToNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1363802807
@@ -2989,6 +3002,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1486652641}
   instructionPanel: {fileID: 0}
   background_music: {fileID: 0}
+  NextLevel: Level 3
 --- !u!114 &1757469971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3061,6 +3075,7 @@ RectTransform:
   - {fileID: 1486652644}
   - {fileID: 635372235}
   - {fileID: 1026401537}
+  - {fileID: 1064117836}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

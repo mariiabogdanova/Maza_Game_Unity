@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour {
 
 	public GameObject pauseButton, pausePanel, instructionPanel;
     public AudioClip background_music;
+    public string NextLevel;
     public void OnPause() {
         pausePanel.SetActive(true);
         pauseButton.SetActive(false);
@@ -45,5 +46,8 @@ public class Pause : MonoBehaviour {
 
 
         //  }
+    }
+    public void OnToNextLevel(){
+        SceneManager.LoadScene(NextLevel);
     }
 }
